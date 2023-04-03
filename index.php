@@ -8,6 +8,12 @@
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <title>Esmail Kattan</title>
+        <style>
+      
+          p {
+            margin: 10px;
+          }
+        </style>
     </head>
     <body>
         <div class="container">
@@ -47,6 +53,26 @@
                         </li>
                     </ul>
                 </li>
+            </ul>
+            <h3>Supervised Learning (Gözetimli Öğrenme)</h3>
+            <ul>
+                <h4>Linear regression model(Doğrusal regresyon modeli)</h4>
+                <div style="display: flex; align-items: center;">
+                    <img src="https://www.scribbr.co.uk/wp-content/uploads//2020/02/simple-linear-regression-in-r-graph-example.png" class="img-thumbnail rounded float-left" >   
+                    <p> 
+                    iki veya daha fazla değişken arasındaki ilişkiyi açıklayan matematiksel bir modeldir.
+                    Bu model, bağımsız değişkenlerin bir veya daha fazla bağımlı değişken üzerindeki etkisini 
+                    incelemek için kullanılır.
+                    Doğrusal regresyon modeli, temel olarak bağımlı değişkenin birinci dereceden polinom ile ilişkisini tanımlar</p>
+                </div>
+                <h5>Tanımlar</h5>
+                <ul>
+                    <p><b>Trainigset</b>: modeli eğitmek için kullanılan veriler</p>
+                    <p><b>Feature</b>: girilen veriler = X = input</p>
+                    <p><b>Target</b>: çıkan veriler = Y = output </p>
+                    <br><p><b>Note</b>: modeli eğitikten sonra modele x verilip ve y döndürür</p>
+                </ul>
+                click <a href="linearRegressionModel.php">here</a> to try this model
             </ul>
         </div>
     </body>
