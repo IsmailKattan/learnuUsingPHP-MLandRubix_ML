@@ -22,9 +22,9 @@ use Phpml\Metric\Regression;
 */
 
 //                 (path ,feature col,is there a head?)
-$data = new CsvDataset("./data1/insurance.csv",1,true);
-echo "veriler: önce x sonra y<br> \n";
-print_r($data);
+$data = new CsvDataset("./data/insurance.csv",1,true);
+//echo "veriler: önce x sonra y<br> \n";
+//print_r($data);
 
 //******************************************************//
 /**
@@ -61,7 +61,7 @@ print_r($testLabels);
 $regression = new LeastSquares();
 $regression->train($dataset,$labels);
 
-//$predict = $regression->predict($testDataset);
+$predict = $regression->predict($testDataset);
 
 
 //******************************************************//
@@ -70,7 +70,7 @@ $regression->train($dataset,$labels);
  * evaluating machine learning model (makine öğrenimi modeli değerlendirme)
  * 
 */
-//$score = Regression::r2score($testLabels,$predict);
+$score = Regression::r2score($testLabels,$predict);
 
 echo "<br>you are welcome in aleppo";
 ?>
