@@ -27,7 +27,7 @@ $data = new CsvDataset("insurance.csv",1,true);
 //echo "veriler: önce x sonra y<br> \n";
 //print_r($data);
 
-//******************************************************//
+//*****************************************************//
 /**
  * 
  * preprocessing the data (veri işlenme)
@@ -52,7 +52,7 @@ print_r($testDataset);
 echo "<br>getTestLabels:<br>\n";
 print_r($testLabels);
 */
-//******************************************************//
+//*****************************************************//
 /**
  * 
  * training(eğitme)
@@ -64,7 +64,7 @@ $regression->train($testDataset, $testLabels);
 $predict = $regression->predict($testDataset);
 
 
-//******************************************************//
+//*****************************************************//
 /**
  * 
  * evaluating machine learning model (makine öğrenimi modeli değerlendirme)
@@ -73,7 +73,7 @@ $predict = $regression->predict($testDataset);
 $score = Regression::r2score($testLabels,$predict);
 echo "<br>r2score is : " . $score;
 
-//******************************************************//
+//*****************************************************//
 /**
  * 
  * make predictions with trained model (eğitimli model ile tahminler yapmak)
