@@ -72,7 +72,7 @@
                     <p><b>Target</b>: çıkan veriler = Y = output </p>
                     <br><p><b>Note</b>: modeli eğitikten sonra modele x verilip ve y döndürür</p>
                 </ul>
-                click <a href="linearRegressionModel.php">here</a> to try this model
+                click <a href="./linearRegressionModel/index.php">here</a> to try this model
             </ul>
         </div>
     </body>

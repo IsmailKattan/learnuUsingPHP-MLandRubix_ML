@@ -15,6 +15,7 @@ use Phpml\Dataset\CsvDataset;
 use Phpml\CrossValidation\StratifiedRandomSplit;
 use Phpml\Regression\LeastSquares;
 use Phpml\Metric\Regression;
+
 /**
  *
  *Loading data (veri yükleme)
@@ -22,7 +23,7 @@ use Phpml\Metric\Regression;
 */
 
 //                 (path ,feature col,is there a head?)
-$data = new CsvDataset("./data/insurance.csv",1,true);
+$data = new CsvDataset("insurance.csv",1,true);
 //echo "veriler: önce x sonra y<br> \n";
 //print_r($data);
 
@@ -38,7 +39,7 @@ $dataset = $split->getTrainSamples();
 $labels = $split->getTrainLabels();
 $testDataset = $split->getTestSamples();
 $testLabels = $split->getTestLabels();
-
+/*
 echo "<br>getTrainSamples:<br>\n";
 print_r($dataset);
 
@@ -50,17 +51,16 @@ print_r($testDataset);
 
 echo "<br>getTestLabels:<br>\n";
 print_r($testLabels);
-
+*/
 //******************************************************//
 /**
  * 
- * 
+ * training(eğitme)
  * 
 */
 
 $regression = new LeastSquares();
-$regression->train($dataset,$labels);
-
+$regression->train($testDataset, $testLabels);
 $predict = $regression->predict($testDataset);
 
 
@@ -71,6 +71,37 @@ $predict = $regression->predict($testDataset);
  * 
 */
 $score = Regression::r2score($testLabels,$predict);
+echo "<br>r2score is : " . $score;
 
-echo "<br>you are welcome in aleppo";
+//******************************************************//
+/**
+ * 
+ * make predictions with trained model (eğitimli model ile tahminler yapmak)
+ * 
+*/
+
+echo "\nMODEL DENEMESI\n";
+
+
+while (true) {
+    $veri=readline("çıkış için nokta giriniz, lütfen bir sayi giriniz\t");
+    if ($veri == ".") {
+        break;
+    }
+    if (isset($veri)&&$veri!="") {
+        if (is_numeric($veri)) {
+            echo "girdiğiniz x değere karşı gelen y değer = " . $regression->predict([$veri]). "\n";
+        }
+        else 
+        {
+            echo "ancak sayi girebilisiniz\n";
+        }
+    }
+    else {
+        echo "NULL !!!\n";
+    }
+
+}    
+    
 ?>
+
