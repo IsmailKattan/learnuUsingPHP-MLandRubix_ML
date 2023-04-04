@@ -7,7 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <title>Esmail Kattan</title>
+        <title>Ismail Kattan</title>
         <style>
       
           p {
@@ -72,7 +72,22 @@
                     <p><b>Target</b>: çıkan veriler = Y = output </p>
                     <br><p><b>Note</b>: modeli eğitikten sonra modele x verilip ve y döndürür</p>
                 </ul>
-                click <a href="./linearRegressionModel/index.php">here</a> to try this model
+                <h5>Matematik</h5>
+                <ul>
+                    <p style="font-size: 20PX;"><i style="font-size: 25px;">f</i><small style="font-size: 15px;">w,b</small>(x)=wx+b</p>
+                    <li><b>w</b>: eğim</li>
+                    <li><b>b</b>y ile kesişim noktası</li>
+                </ul>
+                <p>verilere en yakın doğruyu bulmak için <b>Cost function</b> kullanılır</p>
+                <h5>Matematik</h5>
+                <ul>
+                    <p>Cost function J(w,b); yada b'nin eğime etkisi olmadığından J(w):</p>
+                    <p style="font-size: 20PX;"><i style="font-size: 25px;">J</i>(w)=(1/2m)&#931;<sup>m</sup><sub>i=1</sub> (f<sub>w</sub>(<i>x<sup>(i)</sup></i>) - <i>y<sup>(i)</sup></i>)<sup>2</sup></p>
+                    <p>burdaki (i) kuvvet değil i.eğim değeri temsil eder</p>
+                    <li><b>(f<sub>w</sub>(<i>x<sup>(i)</sup></i>)</b>: i.eğime göre f</i><small style="font-size: 15px;">w,b</small>(x)</li>
+                    <li><b><i>y<sup>(i)</sup></i></b>: gerçek veri (training verileri)</li>
+                </ul>
+                <p>en uygun eğim J(w) fonksiyonun değeri en küçük olduğu eğim</p>
             </ul>
         </div>
     </body>
