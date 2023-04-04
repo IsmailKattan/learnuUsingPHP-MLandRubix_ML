@@ -10,7 +10,7 @@ make predictions with trained model (eğitimli model ile tahminler yapmak)
 */
 
 echo "<b> console ile tavsiye edilir</b><br>\n";
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 use Phpml\Dataset\CsvDataset;
 use Phpml\CrossValidation\StratifiedRandomSplit;
 use Phpml\Regression\LeastSquares;
