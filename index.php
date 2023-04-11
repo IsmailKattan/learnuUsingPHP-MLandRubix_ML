@@ -27,7 +27,7 @@
                     <ul>
                         <li>
                             <h5>Regression(gerilme)</h5>
-                            <ul><li>bu tipte makina sayı tahmin eder </li><li> çok sayıda output mümkündür</li><li>örnek:ev fiyatı tahmini</li></ul>
+                            <ul><li>bu tipte makina sayı tahmin eder </li><li> çok sayıda output mümkündür</li><li>örnek:ev alanı-ev fiyatı tahmini</li></ul>
                         </li>
                         <li>
                             <h5>classification(sınıflandırma)</h5>
@@ -58,7 +58,7 @@
             <ul>
                 <h4>Linear regression model(Doğrusal regresyon modeli)</h4>
                 <div style="display: flex; align-items: center;">
-                    <img src="https://www.scribbr.co.uk/wp-content/uploads//2020/02/simple-linear-regression-in-r-graph-example.png" class="img-thumbnail rounded float-left" >   
+                    <img src="https://i.stack.imgur.com/onf2z.gif" class="img-thumbnail rounded float-left" >   
                     <p> 
                     iki veya daha fazla değişken arasındaki ilişkiyi açıklayan matematiksel bir modeldir.
                     Bu model, bağımsız değişkenlerin bir veya daha fazla bağımlı değişken üzerindeki etkisini 
@@ -79,15 +79,32 @@
                     <li><b>b</b>y ile kesişim noktası</li>
                 </ul>
                 <p>verilere en yakın doğruyu bulmak için <b>Cost function</b> kullanılır</p>
+                <p>Cost function, loss function de olarak bilinir</p>
                 <h5>Matematik</h5>
                 <ul>
-                    <p>Cost function J(w,b); yada b'nin eğime etkisi olmadığından J(w):</p>
+                    <p>Cost function J(w,b)'nin basit hali => J(w):</p>
                     <p style="font-size: 20PX;"><i style="font-size: 25px;">J</i>(w)=(1/2m)&#931;<sup>m</sup><sub>i=1</sub> (f<sub>w</sub>(<i>x<sup>(i)</sup></i>) - <i>y<sup>(i)</sup></i>)<sup>2</sup></p>
                     <p>burdaki (i) kuvvet değil i.eğim değeri temsil eder</p>
-                    <li><b>(f<sub>w</sub>(<i>x<sup>(i)</sup></i>)</b>: i.eğime göre f</i><small style="font-size: 15px;">w,b</small>(x)</li>
+                    <li><b>f<sub>w</sub>(<i>x<sup>(i)</sup></i>)</b>: i.eğime göre f</i><small style="font-size: 15px;">w</small>(x)</li>
                     <li><b><i>y<sup>(i)</sup></i></b>: gerçek veri (training verileri)</li>
                 </ul>
-                <p>en uygun eğim J(w) fonksiyonun değeri en küçük olduğu eğim</p>
+                <p>en uygun eğim w için J(w) fonksiyonun en küçük değeri:</p>
+                <div style="display: flex; align-items: center;">
+                    <img src="https://bharathikannann.github.io/blogs/assets/images/linear-regression-math/alpha0.003-min.gif" class="img-thumbnail rounded float-left" >                 
+                    
+                </div>
+                <ul>
+                    <p>Cost function J(w,b)*3D*</p>
+                    <p style="font-size: 20PX;"><i style="font-size: 25px;">J</i>(w,b)=(1/2m)&#931;<sup>m</sup><sub>i=1</sub> (f<sub>w,b</sub>(<i>x<sup>(i)</sup></i>) - <i>y<sup>(i)</sup></i>)<sup>2</sup></p>
+                    <p>burdaki (i) kuvvet değil i.eğim değeri temsil eder</p>
+                    <li><b>f<sub>w,b</sub>(<i>x<sup>(i)</sup></i>)</b>: i.eğime göre f</i><small style="font-size: 15px;">w,b</small>(x)</li>
+                    <li><b><i>y<sup>(i)</sup></i></b>: gerçek veri (training verileri)</li>
+                </ul>
+                <p>en uygun doğru denklemi w ve b için J(w,b) fonksiyonun en küçük değeri:</p>
+                <div style="display: flex; align-items: center;">
+                    <img src="https://alykhantejani.github.io/images/gradient_descent_line_graph.gif" class="img-thumbnail rounded float-left" >                 
+                    
+                </div>
             </ul>
         </div>
     </body>
