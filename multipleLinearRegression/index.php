@@ -10,7 +10,7 @@ use Phpml\Metric\Accuracy;
 $dataset = new CsvDataset('data.csv', 3, true);
 
 // Split data into training and testing datasets
-$randomSplit = new \Phpml\CrossValidation\RandomSplit($dataset, 0.3);
+$randomSplit = new \Phpml\CrossValidation\RandomSplit($dataset, 0.3, 156);
 
 $trainingSamples = $randomSplit->getTrainSamples();
 $trainingLabels = $randomSplit->getTrainLabels();
@@ -62,6 +62,7 @@ echo 'Accuracy: ' . $accuracy;
 	</form>
 	<?php
 		if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+			unset($area, $rooms, $year, $predictedPrice);
 		    $area = $_POST['Area'];
 		    $rooms = $_POST['Rooms'];
 		    $year = $_POST['year'];
