@@ -130,9 +130,56 @@
                     <p><b>Target</b>: çıkan veriler = Y = output </p>
                     <br><p><b>Note</b>: modeli eğitikten sonra modele x verilip ve y döndürür</p>
                     <p style="font-size: 20PX;"><i style="font-size: 25px;">f</i><small style="font-size: 15px;">w <sup>-></sup>,b</small>(x <sup>-></sup>)=w<sup>-></sup>x<sup>-></sup>+b</p>
-                    <li><b>w</b>: eğim</li>
-                    <li><b>b</b>y ile kesişim noktası</li>
-            </ul>
+
+                    <h4>classification(sınıflandırma)</h4> <br>
+                    <p> 
+                        Lineer regrasyonda -sonsuzdan->+sonsuza giden target(output) elde edilebilir yanlız bazı durumlarda girilen sayı veya vekör için 
+                        1 veya 0 değeri istiyor olabiliriz dolayısıyla cost fonksiyonu yetersiz kalır veya modelimiz doğruluktan uzaklaşır
+                    </p> <br>
+                    <p>
+                        Bu durumun çözümü "<b>logistic regression</b>"dir
+                    </p>
+                    <h5>Logistic function (sigmoid function)</h5>
+                    <p>önce lineer regrasiyonda kullandığımız fonksiyonu hatırlayalım</p>
+                    <p style="font-size: 20PX;"><i style="font-size: 25px;">f</i><small style="font-size: 15px;">w <sup>-></sup>,b</small>(x <sup>-></sup>)=w<sup>-></sup>x<sup>-></sup>+b</p>
+                    <p>şimdi de lineer regrasyonunda kullandığımız fonksiyonunu z'ye eşitleyelim</p>
+                    <p style="font-size: 20PX;"><i style="font-size: 25px;">z</i>=w<sup>-></sup>x<sup>-></sup>+b</p>
+                    <p>artık logistik fonksiyonu şu şekilde ifade edebiliriz</p>
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://miro.medium.com/v2/resize:fit:392/1*HQV2SKr2hDoV0yXxpjPRbg.png" class="img-fluid " alt="">
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <img src="https://s8.gifyu.com/images/Logreg_1.gif" class="img-fluid " alt="">
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <img src="https://miro.medium.com/v2/resize:fit:1400/1*PQ8tdohapfm-YHlrRIRuOA.gif" class="img-fluid " alt="">
+                        </div>
+                    </div>
+                    <p>Artık en küçük w ve b değerleri bulmamız gerekmektedir</p>
+                    <p>Lineer regrassyonunda kullandığımız cost fonksiyonu hatırlıyalım</p>
+                    <p style="font-size: 20PX;"><i style="font-size: 25px;">J</i>(w,b)=(1/2m)&#931;<sup>m</sup><sub>i=1</sub> (f<sub>w,b</sub>(<i>x<sup>(i)</sup></i>) - <i>y<sup>(i)</sup></i>)<sup>2</sup></p>
+                    <p>Eğer cost fonksiyonunda logistik fonksiyonu yazılırsa şöylr bir sonuç üretilir</p>
+                    <div class="col-sm-3" style="display: flex; align-items: center;">
+                        <img src="https://files.codingninjas.in/article_images/loss-function-for-logistic-regression-4-1639222158.webp" class="img-fluid" alt="">
+                    </div>
+                    <p>işaretlenmiş noktalar terel min olarak adlandırılır ve gradient decent foksiyonu bir yerel min bularak elde ettiği değerleri döndürür</p>
+                    <p>cost fonksiyonuna benzer şekilde:</p>
+                    <p style="font-size: 20PX;"><i style="font-size: 25px;">J</i>(w,b)=(1/m)&#931;<sup>m</sup><sub>i=1</sub> (1/2)(f<sub>w,b</sub>(<i>x<sup>(i)</sup></i>) - <i>y<sup>(i)</sup></i>)<sup>2</sup></p>
+                    <p>1/2'yi &#931; içine alacağız ve fonksiyonun şeklini değiştireceği dolsyısyla:</p>
+                    <p style="font-size: 20PX;"><i style="font-size: 25px;">J</i>(w,b)=(1/m)&#931;<sup>m</sup><sub>i=1</sub> L(f<sub>w,b</sub>(<i>x<sup>(i)</sup></i>) , <i>y<sup>(i)</sup></i>)</p>
+                    <p>L fonksiyonun (logistic loss function): </p>
+                    <div class="col-sm-4" style="display: flex; align-items: center;">
+                        <img src="https://studymachinelearning.com/wp-content/uploads/2019/09/cost_fn_logistic_reg.png " class="img-fluid" alt="">
+                    </div>
+                    <p>Aynı fonskiyonu tek denklemde oluşturup tekrar &#931; içine yazarsak şu şekli alır</p>
+                    <div class="col-sm-4" style="display: flex; align-items: center;">
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/1*dEZxrHeNGlhfNt-JyRLpig.png " class="img-fluid" alt="">
+                    </div>  
+                    <div class="col-sm-6">
+                        <img src="https://tomaszgolan.github.io/reveal_talks/img/ml/logistic_classification.gif" class="img-fluid" alt="">
+                    </div>
+                </ul>
         </div>
     </body>
 </html>
