@@ -56,12 +56,12 @@
             </ul>
             <h3>Supervised Learning (Gözetimli Öğrenme)</h3>
             <ul>
-                <h4>Linear regression model(Doğrusal regresyon modeli)</h4>
+                <h4>Linear Regression Model(Doğrusal Regresyon Modeli)</h4>
                 <div style="display: flex; align-items: center;">
-                    <img src="https://i.stack.imgur.com/onf2z.gif" class="img-thumbnail rounded float-left" >   
+                    <img src="https://i.stack.imgur.com/onf2z.gif" class="img-thumbnail rounded float-left img-fluid " >   
                     <p> 
-                    iki veya daha fazla değişken arasındaki ilişkiyi açıklayan matematiksel bir modeldir.
-                    Bu model, bağımsız değişkenlerin bir veya daha fazla bağımlı değişken üzerindeki etkisini 
+                    iki değişken arasındaki ilişkiyi açıklayan matematiksel bir modeldir.
+                    Bu model, bağımsız değişkenin bir bağımlı değişken üzerindeki etkisini 
                     incelemek için kullanılır.
                     Doğrusal regresyon modeli, temel olarak bağımlı değişkenin birinci dereceden polinom ile ilişkisini tanımlar</p>
                 </div>
@@ -90,7 +90,7 @@
                 </ul>
                 <p>en uygun eğim w için J(w) fonksiyonun en küçük değeri:</p>
                 <div style="display: flex; align-items: center;">
-                    <img src="https://bharathikannann.github.io/blogs/assets/images/linear-regression-math/alpha0.003-min.gif" class="img-thumbnail rounded float-left" >                 
+                    <img src="https://bharathikannann.github.io/blogs/assets/images/linear-regression-math/alpha0.003-min.gif" class="img-thumbnail rounded float-left img-fluid " >                 
                     
                 </div>
                 <ul>
@@ -102,9 +102,36 @@
                 </ul>
                 <p>en uygun doğru denklemi w ve b için J(w,b) fonksiyonun en küçük değeri:</p>
                 <div style="display: flex; align-items: center;">
-                    <img src="https://alykhantejani.github.io/images/gradient_descent_line_graph.gif" class="img-thumbnail rounded float-left" >                 
-                    
+                    <img src="https://alykhantejani.github.io/images/gradient_descent_line_graph.gif" class="img-thumbnail rounded float-left img-fluid " >                 
                 </div>
+                <br>
+                <ul>
+                    <h4>Gradient Descent</h4>
+                    <p>Her hangi bir fonksiyonun en küçük değerini bulmak için kullanılan bir algoritmadır </p>
+                    <h5><b>Code :</b></h5>
+                    <div>
+                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200611183120/1406-7.png" alt="">
+                    </div>
+                    <li>a: öğrenme oranı(learning rate) bu değer sabit bir sayı olabilir veya adımdan adıma daha küçük bir değer alabilir</li>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <img src="https://egallic.fr/Enseignement/ML/ECB/book/figs/example_two_dim/descent_3D_Mishra.gif" class="img-fluid " alt="">
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <img src="https://miro.medium.com/v2/resize:fit:1400/1*47skUygd3tWf3yB9A10QHg.gif" class="img-fluid " alt="">
+                        </div>
+                    </div>
+                </ul>
+                <br>
+                <h4>Multiple Linear Regression Model(Çoklu Doğrusal Regresyon Modeli)</h4>
+                <p>Bu modelde artık dataset'teki giriş verileri(features) bir sayı değil bir vektördür </p>
+                <p><b>Trainigset</b>: modeli eğitmek için kullanılan veriler</p>
+                    <p><b>Features</b>: girilen veri vektörü = X = input</p>
+                    <p><b>Target</b>: çıkan veriler = Y = output </p>
+                    <br><p><b>Note</b>: modeli eğitikten sonra modele x verilip ve y döndürür</p>
+                    <p style="font-size: 20PX;"><i style="font-size: 25px;">f</i><small style="font-size: 15px;">w <sup>-></sup>,b</small>(x <sup>-></sup>)=w<sup>-></sup>x<sup>-></sup>+b</p>
+                    <li><b>w</b>: eğim</li>
+                    <li><b>b</b>y ile kesişim noktası</li>
             </ul>
         </div>
     </body>
